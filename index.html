@@ -2,67 +2,9 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora de IMC - Estilo Noir</title>
-  <style>
-    body {
-      font-family: 'Courier New', Courier, monospace;
-      background-color: #0d0d0d;
-      color: #e0e0e0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-    }
-    .container {
-      background: #1a1a1a;
-      padding: 30px 40px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.05);
-      text-align: center;
-      max-width: 300px;
-    }
-    h1 {
-      font-weight: normal;
-      margin-bottom: 20px;
-      letter-spacing: 2px;
-    }
-    input {
-      background-color: #333;
-      border: 1px solid #555;
-      color: #e0e0e0;
-      padding: 10px;
-      margin: 10px 0;
-      width: 100%;
-      border-radius: 5px;
-    }
-    button {
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #e50914;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 100%;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-    button:hover {
-      background-color: #b2060f;
-    }
-    #resultado {
-      margin-top: 20px;
-      font-size: 16px;
-      font-weight: bold;
-    }
-    footer {
-      margin-top: 30px;
-      font-size: 14px;
-      color: #555;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -78,31 +20,6 @@
   <p>Feito por Bruno Dias</p>
 </footer>
 
-<script>
-  function calcularIMC() {
-    const peso = document.getElementById('peso').value;
-    const altura = document.getElementById('altura').value;
-    
-    if (peso && altura) {
-      const imc = (peso / (altura * altura)).toFixed(2);
-      let mensagem = '';
-
-      if (imc < 18.5) {
-        mensagem = 'Abaixo do peso';
-      } else if (imc >= 18.5 && imc < 24.9) {
-        mensagem = 'Peso normal';
-      } else if (imc >= 25 && imc < 29.9) {
-        mensagem = 'Sobrepeso';
-      } else {
-        mensagem = 'Obesidade';
-      }
-
-      document.getElementById('resultado').innerHTML = `Seu IMC é ${imc} (${mensagem})`;
-    } else {
-      document.getElementById('resultado').innerHTML = 'Preencha todos os campos.';
-    }
-  }
-</script>
-
+  <script src="main.js"></script>
 </body>
 </html>

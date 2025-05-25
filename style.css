@@ -1,0 +1,88 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  background: #1a1a1a;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.05);
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+}
+
+h1 {
+  font-weight: normal;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-size: 24px;
+}
+
+input {
+  background-color: #333;
+  border: 1px solid #555;
+  color: #e0e0e0;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b2060f;
+}
+
+#resultado {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  width: 100%;
+}
+
+/* Responsividade extra para telas menores */
+@media (max-width: 400px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  button {
+    padding: 10px;
+  }
+}
